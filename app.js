@@ -1,4 +1,6 @@
 require("dotenv").config();
+const swaggerUI = require("swagger-ui-express");
+const swaggerSpec = require("./swagger");
 const express = require("express");
 const helmet = require("helmet");
 const fileUpload = require("express-fileupload");
@@ -9,6 +11,7 @@ const xss = require("xss-clean");
 const cors = require("cors");
 const globalErrorHandler = require("./src/middlewares/globalErrorHandler");
 const config = require("./src/config/config");
+
 
 const app = express();
 
@@ -50,6 +53,9 @@ app.use("/admin/api/product", adminProductRoute);
 app.use("/admin/api/user", adminUserRoute);
 app.use("/admin/api/user-setting", adminUserSetting);
 
+// Swagger Documentation Route
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+
 // Default Route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to admin server" });
@@ -77,6 +83,8 @@ app.post("/upload", (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
+
 
 // 404 Error Handling
 app.all("*", (req, res, next) => {
