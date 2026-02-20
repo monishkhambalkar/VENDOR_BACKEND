@@ -2,14 +2,9 @@ const express = require("express");
 const path = require("node:path");
 const multer = require("multer");
 const authenticate = require("../middlewares/authenticate");
+const redisCache = require("../middlewares/redisCache");
 
-const productController = ({
-  addProduct,
-  updateProduct,
-  deleteProduct,
-  selectProduct,
-  selectOneProduct,
-} = require("../controllers/product"));
+const productController = require("../controllers/product");
 
 const productRouter = express.Router();
 
@@ -18,6 +13,8 @@ const upload = multer({
   limits: { fileSize: 3e7 },
 });
 
+
+// ADD
 productRouter.post(
   "/add-product",
   authenticate,
@@ -25,21 +22,40 @@ productRouter.post(
   productController.addProduct
 );
 
+
+// UPDATE
 productRouter.patch(
   "/update-product/:iProductID",
   upload.fields([{ name: "file", maxCount: 3 }]),
   productController.updateProduct
 );
 
+
+// DELETE
 productRouter.delete(
   "/delete-product/:iProductID",
   productController.deleteProduct
 );
 
-productRouter.post("/select-product", productController.selectProduct);
 
+// SELECT LIST (CACHED)
+productRouter.post(
+  "/select-product",
+  // redisCache((req) =>
+  //   `products:${req.query.page || 1}:${req.query.limit || 5}:${req.query.search || ""}`
+  // ),
+  authenticate,
+  redisCache((req) =>
+    `products:${req.user.id}:${req.query.page || 1}:${req.query.limit || 5}:${req.query.search || ""}`
+  ), // ⭐ vendor-specific cache key
+  productController.selectProduct
+);
+
+
+// SELECT SINGLE (CACHED)
 productRouter.post(
   "/select-product/:iProductID",
+  redisCache((req) => `product:${req.params.iProductID}`),
   productController.selectOneProduct
 );
 
