@@ -1,15 +1,45 @@
-const express = require("express");
-const { NextFunction, Request, Response } = require("express");
+// const errorLogger = require("../utils/errorLogger");
+// const express = require("express");
+// const { NextFunction, Request, Response } = require("express");
+// const config = require("../config/config");
+// const createHttpError = require("http-errors");
+
+// // GLOBAL ERROR HANDLER
+// const globalErrorHandler = (err, req, res, next) => {
+
+//   errorLogger(err);
+
+//   // 👇 PRINT ERROR IN TERMINAL (file + line number)
+//   console.error("🔥 ERROR STACK:\n", err.stack);
+
+//   const statusCode = err.statusCode || err.status || 500;
+
+//   res.status(statusCode).json({
+//     success: false,
+//     message: err.message || "Internal Server Error",
+//     stack: config.env === "development" ? err.stack : undefined,
+//   });
+// };
+
+// module.exports = globalErrorHandler;
+
+
+
 const config = require("../config/config");
-const createHttpError = require("http-errors");
+const errorLogger = require("../utils/errorLogger");
 
-// Global Error Handler
 const globalErrorHandler = (err, req, res, next) => {
-  const statusCode = err.statusCode || 500;
 
-  return res.status(statusCode).json({
-    message: err.message,
-    errorStack: config.env === "development" ? err.stack : "",
+  console.error("🔥 ERROR STACK:\n", err.stack);
+
+  errorLogger(err); // <-- LOG TO FILE
+
+  const statusCode = err.statusCode || err.status || 500;
+
+  res.status(statusCode).json({
+    success: false,
+    message: err.message || "Internal Server Error",
+    stack: config.env === "development" ? err.stack : undefined,
   });
 };
 

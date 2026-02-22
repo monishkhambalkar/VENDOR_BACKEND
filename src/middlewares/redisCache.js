@@ -9,8 +9,13 @@ const redisCache = (keyGenerator) => {
 
       if (cachedData) {
         console.log("⚡ Data from Redis:", cacheKey);
-        return res.status(200).json(JSON.parse(cachedData));
+        const parsedData = JSON.parse(cachedData);
+        console.log("Parsed cached data:", parsedData);
+        return res.status(200).json(parsedData);
       }
+
+      console.log("CACHE KEY:", cacheKey); // ✅ FIXED
+      console.log("CACHE HIT:", !!cachedData);
 
       // pass key to controller
       req.cacheKey = cacheKey;

@@ -45,6 +45,7 @@ const addProduct = async (req, res, next) => {
 
     const { sProductName } = req.body;
     const aProductFiles = req.files.file;
+    const userId = req.params.vendorId;
 
     if (!sProductName) {
       return next(createHttpError(400, "All fields required"));
@@ -82,11 +83,11 @@ const addProduct = async (req, res, next) => {
       brand: req.body.sBrand,
       colors: req.body.sColor,
       images: aProductImages,
-      user_id: "665ad869514ad9cc291adced",
+      user_id: userId,
       status: 1,
     });
 
-    await clearVendorProductsCache(req.user.id);
+    await clearVendorProductsCache(userId);
 
     res.status(201).json({
       id: productSave._id,
@@ -102,7 +103,6 @@ const addProduct = async (req, res, next) => {
 // ======================
 // SELECT PRODUCTS (LIST)
 // ======================
-
 const selectProduct = async (req, res, next) => {
   try {
 
@@ -110,15 +110,22 @@ const selectProduct = async (req, res, next) => {
     const limit = parseInt(req.query.limit) || 5;
     const skip = (page - 1) * limit;
     const search = req.query.search || "";
+    const vendorId = req.user.id;
 
     const searchQuery = search
       ? { product_name: { $regex: search, $options: "i" } }
       : {};
 
-    const totalProducts = await productModel.countDocuments(searchQuery);
+    const totalProducts = await productModel.countDocuments({
+      user_id: vendorId,
+      ...searchQuery,
+    });
 
     const products = await productModel
-      .find({ user_id: req.user.id, ...searchQuery })
+      .find({
+        user_id: vendorId,
+        ...searchQuery,
+      })
       .skip(skip)
       .limit(limit);
 
@@ -128,6 +135,8 @@ const selectProduct = async (req, res, next) => {
       totalPages: Math.ceil(totalProducts / limit),
     };
 
+    console.log("CHECK BEFORE REDIS")
+
     // SAVE CACHE
     await redisClient.set(
       req.cacheKey,
@@ -135,20 +144,21 @@ const selectProduct = async (req, res, next) => {
       { EX: 3600 }
     );
 
+    
+    console.log("CHECK AFTER REDIS")
+
     console.log("🧠 Data from MongoDB");
 
     res.status(200).json(responseData);
 
   } catch (err) {
-    next(createHttpError(500, "Error fetching products"));
+    next(err);
   }
 };
-
 
 // ======================
 // SELECT ONE PRODUCT
 // ======================
-
 const selectOneProduct = async (req, res, next) => {
   try {
 
@@ -177,7 +187,6 @@ const selectOneProduct = async (req, res, next) => {
 // ======================
 // UPDATE PRODUCT
 // ======================
-
 const updateProduct = async (req, res, next) => {
   try {
 
@@ -209,7 +218,6 @@ const updateProduct = async (req, res, next) => {
 // ======================
 // DELETE PRODUCT
 // ======================
-
 const deleteProduct = async (req, res, next) => {
   try {
 

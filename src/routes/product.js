@@ -16,7 +16,7 @@ const upload = multer({
 
 // ADD
 productRouter.post(
-  "/add-product",
+  "/add-product/:vendorId",
   authenticate,
   upload.fields([{ name: "file", maxCount: 3 }]),
   productController.addProduct
@@ -41,13 +41,13 @@ productRouter.delete(
 // SELECT LIST (CACHED)
 productRouter.post(
   "/select-product",
-  // redisCache((req) =>
-  //   `products:${req.query.page || 1}:${req.query.limit || 5}:${req.query.search || ""}`
-  // ),
   authenticate,
-  redisCache((req) =>
-    `products:${req.user.id}:${req.query.page || 1}:${req.query.limit || 5}:${req.query.search || ""}`
-  ), // ⭐ vendor-specific cache key
+  redisCache(
+    (req) =>
+      `products:${req.user.id}:${req.query.page || 1}:${
+        req.query.limit || 5
+      }:${req.query.search || ""}`
+  ),
   productController.selectProduct
 );
 
