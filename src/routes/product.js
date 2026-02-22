@@ -2,15 +2,8 @@ const express = require("express");
 const path = require("node:path");
 const multer = require("multer");
 const authenticate = require("../middlewares/authenticate");
-
-const productController = ({
-  addProduct,
-  updateProduct,
-  deleteProduct,
-  selectProduct,
-  selectOneProduct,
-} = require("../controllers/product"));
-
+const redisCache = require("../middlewares/redisCache");
+const productController = require("../controllers/product");
 const productRouter = express.Router();
 
 const upload = multer({
@@ -18,6 +11,8 @@ const upload = multer({
   limits: { fileSize: 3e7 },
 });
 
+
+// ADD
 /**
  * @swagger
  * /admin/api/product/add-product:
@@ -29,13 +24,16 @@ const upload = multer({
  *       200:
  *         description: Product added
  */
+
 productRouter.post(
-  "/add-product",
+  "/add-product/:vendorId",
   authenticate,
   upload.fields([{ name: "file", maxCount: 3 }]),
   productController.addProduct
 );
 
+
+// UPDATE
 /**
  * @swagger
  * /admin/api/product/update-product/{iProductID}:
@@ -59,6 +57,7 @@ productRouter.patch(
   productController.updateProduct
 );
 
+// DELETE
 /**
  * @swagger
  * /admin/api/product/delete-product/{iProductID}:
@@ -81,6 +80,22 @@ productRouter.delete(
   productController.deleteProduct
 );
 
+
+// SELECT LIST (CACHED)
+productRouter.post(
+  "/select-product",
+  authenticate,
+  redisCache(
+    (req) =>
+      `products:${req.user.id}:${req.query.page || 1}:${
+        req.query.limit || 5
+      }:${req.query.search || ""}`
+  ),
+  productController.selectProduct
+);
+
+
+// SELECT SINGLE (CACHED)
 /**
  * @swagger
  * /admin/api/product/select-product:
@@ -126,6 +141,7 @@ productRouter.post("/select-product", productController.selectProduct);
  */
 productRouter.post(
   "/select-product/:iProductID",
+  redisCache((req) => `product:${req.params.iProductID}`),
   productController.selectOneProduct
 );
 

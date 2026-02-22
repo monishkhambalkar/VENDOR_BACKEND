@@ -2,7 +2,7 @@ const createHttpError = require("http-errors");
 const subCategoryModel = require("../models/subCategory");
 
 const addSubCategory = async (req, res, next) => {
-  const { iCategoryIDForAdd, sNameAddSubCategory } = req.body;
+  const { iCategoryIDForAdd, sCategoryName, sNameAddSubCategory } = req.body;
 
   if (!iCategoryIDForAdd || !sNameAddSubCategory) {
     const error = createHttpError(400, "all fields are required");
@@ -11,7 +11,7 @@ const addSubCategory = async (req, res, next) => {
   try {
     const subCategory = new subCategoryModel({
       category_id: iCategoryIDForAdd,
-      category_name: "test",
+      category_name: sCategoryName,
       sub_category_name: sNameAddSubCategory,
       user_id: "665ad869514ad9cc291adced",
       createdAt: new Date(),
