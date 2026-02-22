@@ -1,5 +1,6 @@
 require("dotenv").config();
-
+const swaggerUI = require("swagger-ui-express");
+const swaggerSpec = require("./swagger");
 const express = require("express");
 const helmet = require("helmet");
 const fileUpload = require("express-fileupload");
@@ -13,7 +14,6 @@ const createHttpError = require("http-errors"); // IMPORTANT
 const globalErrorHandler = require("./src/middlewares/globalErrorHandler");
 
 const app = express();
-
 
 // ================================
 // SECURITY MIDDLEWARE
@@ -71,6 +71,11 @@ app.use("/admin/api/user-setting", adminUserSetting);
 // ================================
 // DEFAULT ROUTE
 // ================================
+
+// Swagger Documentation Route
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerSpec));
+
+// Default Route
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to admin server" });
 });
@@ -88,7 +93,6 @@ app.get("/test-error", (req, res) => {
 // FILE UPLOAD
 // ================================
 app.use(fileUpload());
-
 app.post("/upload", (req, res) => {
   if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).json({ message: "No files were uploaded" });
@@ -114,7 +118,6 @@ app.post("/upload", (req, res) => {
     next(error);
   }
 });
-
 
 // ================================
 // 404 HANDLER (ALWAYS LAST ROUTE)
