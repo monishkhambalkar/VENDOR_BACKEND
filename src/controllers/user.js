@@ -101,7 +101,7 @@ const loginUser = async (req, res, next) => {
 
   res
     .status(200)
-    .json({ accessToken: token, user: login._id, refreshToken: refreshToken });
+    .json({ accessToken: token, user: login._id, user_type: login.user_type,  refreshToken: refreshToken });
 };
 
 const logoutUser = async (req, res, next) => {
