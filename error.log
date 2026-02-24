@@ -1110,3 +1110,380 @@ Stack: InternalServerError: Error while fetching categories
     at selectCategory (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/category.js:99:10)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 ----------------------
+
+Time: Sun Feb 22 2026 12:32:02 GMT+0530 (India Standard Time)
+Message: Error while fetching categories
+Stack: InternalServerError: Error while fetching categories
+    at selectCategory (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/category.js:99:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 12:32:02 GMT+0530 (India Standard Time)
+Message: Error while fetching categories
+Stack: InternalServerError: Error while fetching categories
+    at selectCategory (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/category.js:99:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 12:32:11 GMT+0530 (India Standard Time)
+Message: Error while fetching sub categories by category
+Stack: InternalServerError: Error while fetching sub categories by category
+    at selectSubCategory (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/subCategory.js:104:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 15:23:23 GMT+0530 (India Standard Time)
+Message: Token expired or invalid
+Stack: UnauthorizedError: Token expired or invalid
+    at authenticate (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/middlewares/authenticate.js:32:17)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:47:12)
+----------------------
+
+Time: Sun Feb 22 2026 15:23:23 GMT+0530 (India Standard Time)
+Message: Token expired or invalid
+Stack: UnauthorizedError: Token expired or invalid
+    at authenticate (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/middlewares/authenticate.js:32:17)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:47:12)
+----------------------
+
+Time: Sun Feb 22 2026 15:44:03 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 15:44:05 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 15:44:18 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 16:01:12 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 16:02:50 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Sun Feb 22 2026 16:10:01 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:10:01 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:16:01 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:16:01 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:17:17 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:17:17 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:17:59 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:17:59 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:20:08 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:20:08 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:26:04 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:26:04 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:27:29 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 16:27:29 GMT+0530 (India Standard Time)
+Message: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+Stack: TypeError: "arguments[1]" must be of type "string | Buffer", got undefined instead.
+    at encodeCommand (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/RESP/encoder.js:17:19)
+    at RedisCommandsQueue.commandsToWrite (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/commands-queue.js:364:49)
+    at commandsToWrite.next (<anonymous>)
+    at RedisSocket.write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/socket.js:253:20)
+    at #write (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:750:22)
+    at Immediate.<anonymous> (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/@redis/client/dist/lib/client/index.js:757:24)
+    at process.processImmediate (node:internal/timers:483:21)
+----------------------
+
+Time: Sun Feb 22 2026 17:02:31 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Mon Feb 23 2026 08:51:56 GMT+0530 (India Standard Time)
+Message: User not found
+Stack: BadRequestError: User not found
+    at loginUser (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/user.js:79:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Mon Feb 23 2026 10:27:50 GMT+0530 (India Standard Time)
+Message: Token expired or invalid
+Stack: UnauthorizedError: Token expired or invalid
+    at authenticate (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/middlewares/authenticate.js:32:17)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:47:12)
+----------------------
+
+Time: Mon Feb 23 2026 10:27:50 GMT+0530 (India Standard Time)
+Message: Token expired or invalid
+Stack: UnauthorizedError: Token expired or invalid
+    at authenticate (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/middlewares/authenticate.js:32:17)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:47:12)
+----------------------
+
+Time: Tue Feb 24 2026 00:35:25 GMT+0530 (India Standard Time)
+Message: Update error
+Stack: InternalServerError: Update error
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:217:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Tue Feb 24 2026 00:36:58 GMT+0530 (India Standard Time)
+Message: Update error
+Stack: InternalServerError: Update error
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:217:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Tue Feb 24 2026 00:37:00 GMT+0530 (India Standard Time)
+Message: Update error
+Stack: InternalServerError: Update error
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:217:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Tue Feb 24 2026 00:38:20 GMT+0530 (India Standard Time)
+Message: Update error
+Stack: InternalServerError: Update error
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:219:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Tue Feb 24 2026 08:15:44 GMT+0530 (India Standard Time)
+Message: Token expired or invalid
+Stack: UnauthorizedError: Token expired or invalid
+    at authenticate (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/middlewares/authenticate.js:32:17)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:47:12)
+----------------------
+
+Time: Tue Feb 24 2026 08:15:44 GMT+0530 (India Standard Time)
+Message: Token expired or invalid
+Stack: UnauthorizedError: Token expired or invalid
+    at authenticate (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/middlewares/authenticate.js:32:17)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:149:13)
+    at Route.dispatch (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/route.js:119:3)
+    at Layer.handle [as handle_request] (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/layer.js:95:5)
+    at /var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:346:12)
+    at next (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:175:3)
+    at router (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/node_modules/express/lib/router/index.js:47:12)
+----------------------
+
+Time: Tue Feb 24 2026 08:17:24 GMT+0530 (India Standard Time)
+Message: Update error
+Stack: InternalServerError: Update error
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:219:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Tue Feb 24 2026 08:24:39 GMT+0530 (India Standard Time)
+Message: Update error
+Stack: InternalServerError: Update error
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:237:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------
+
+Time: Tue Feb 24 2026 08:27:34 GMT+0530 (India Standard Time)
+Message: Cannot read properties of undefined (reading 'id')
+Stack: InternalServerError: Cannot read properties of undefined (reading 'id')
+    at updateProduct (/var/www/a_practice/AMAZON_E-COMMERCE/VENDOR_BACKEND/src/controllers/product.js:238:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+----------------------

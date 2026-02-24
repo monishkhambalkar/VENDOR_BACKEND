@@ -112,6 +112,8 @@ const selectProduct = async (req, res, next) => {
     const search = req.query.search || "";
     const vendorId = req.user.id;
 
+    console.time("MongoDB");
+
     const searchQuery = search
       ? { product_name: { $regex: search, $options: "i" } }
       : {};
@@ -148,6 +150,8 @@ const selectProduct = async (req, res, next) => {
     console.log("CHECK AFTER REDIS")
 
     console.log("🧠 Data from MongoDB");
+
+    console.timeEnd("MongoDB");
 
     res.status(200).json(responseData);
 
@@ -192,10 +196,30 @@ const updateProduct = async (req, res, next) => {
 
     const { iProductID } = req.params;
 
+    // console.log(req.body); return false;
+
+    const updateData = {
+    product_name: req.body.sProductName,
+    category_id: req.body.iCategory,
+    sub_category_id: req.body.iSubCategory,
+    original_price: Number(req.body.iOriginalPrice),
+    selling_price: Number(req.body.iSellingPrice),
+    quantity: Number(req.body.sQty),
+    label_tags: req.body.sTags ? [req.body.sTags] : [],
+    product_content: req.body.sProductContent,
+    product_specification: req.body.sProductSpecification,
+    brand: req.body.sBrand,
+    colors: req.body.sColor,
+    images: req.body.file ? [req.body.file] : []
+  };
+
     const updatedProduct = await productModel.findByIdAndUpdate(
       iProductID,
-      req.body,
-      { new: true }
+      { $set: updateData },
+      {
+        new: true,
+        runValidators: true
+      }
     );
 
     if (!updatedProduct) {
@@ -209,8 +233,9 @@ const updateProduct = async (req, res, next) => {
       id: updatedProduct._id,
     });
 
-  } catch {
-    next(createHttpError(500, "Update error"));
+  } catch (err){
+    console.error("REAL ERROR:", err);
+    next(createHttpError(500, err.message));
   }
 };
 

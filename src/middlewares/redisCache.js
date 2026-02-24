@@ -3,6 +3,7 @@ const redisClient = require("../config/redis");
 const redisCache = (keyGenerator) => {
   return async (req, res, next) => {
     try {
+      console.time("Redis");
       const cacheKey = keyGenerator(req);
 
       const cachedData = await redisClient.get(cacheKey);
@@ -11,7 +12,9 @@ const redisCache = (keyGenerator) => {
         console.log("⚡ Data from Redis:", cacheKey);
         const parsedData = JSON.parse(cachedData);
         console.log("Parsed cached data:", parsedData);
+        console.timeEnd("Redis");
         return res.status(200).json(parsedData);
+
       }
 
       console.log("CACHE KEY:", cacheKey); // ✅ FIXED
