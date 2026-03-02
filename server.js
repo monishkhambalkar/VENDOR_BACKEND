@@ -11,7 +11,7 @@ const startServer = async () => {
     await connectDB();
 
     // Define Port
-    const port = config.port || 3000;
+    const port = config.port || 6060;;
 
     // Create HTTP Server
     const server = http.createServer(app);

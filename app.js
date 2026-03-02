@@ -29,13 +29,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // ================================
 // CORS
 // ================================
+const allowedOrigins = [
+  "http://nextdealz.in",
+  "https://nextdealz.in",
+  "http://www.nextdealz.in",
+  "https://www.nextdealz.in"
+];
+
 const corsOptions = {
-  origin: "http://localhost:8081",
-  optionsSuccessStatus: 200,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
   credentials: true,
 };
-app.use(cors(corsOptions));
 
+app.use(cors(corsOptions));
 
 // ================================
 // RATE LIMITER
